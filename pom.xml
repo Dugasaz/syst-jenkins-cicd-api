@@ -17,7 +17,7 @@
 		<mule.maven.plugin.version>3.5.1</mule.maven.plugin.version>
 	</properties>
 
-	<build>
+<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -27,8 +27,23 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
+				<version>3.3.5</version>
 				<extensions>true</extensions>
+				<configuration>
+				<cloudHubDeployment>
+			      <muleVersion>4.3.0</muleVersion>
+			      <username>Abebe1</username>
+			      <password>Abebe12345</password>
+			      <applicationName>syst-jenkins-cicd-api</applicationName>
+			      <environment>Sandbox</environment>   
+			      <workers>1</workers>
+			      <workerType>MICRO</workerType>
+			      <properties>
+				    <maven.compiler.target>1.8</maven.compiler.target>
+				    <maven.compiler.source>1.8</maven.compiler.source>
+				</properties>
+			    </cloudHubDeployment>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
